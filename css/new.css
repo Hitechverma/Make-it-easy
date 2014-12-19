@@ -1,0 +1,74 @@
+p{
+	font-size: 15px;
+}
+
+#new{
+	margin-top: 10%;
+}
+
+.quad{
+	display: block;
+	padding: 1%;
+	/*border: 3px solid black;*/
+	width: 45%;
+	text-align: center;
+
+}
+.quad h1{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#tut{
+	float: left;
+}
+#prog{
+	float: right;
+	margin-right: 5%;
+}
+#down{
+	padding-top: 25px;
+	clear: both;
+}
+#faq{
+	float: left;
+}
+#contact{
+	float: right;
+	margin-right: 5%;
+}
+.case{
+	background-color: #eee;
+}
+table td,th{
+	border: 1px inset black;
+	border-color: #c0c0c0
+}
+table{
+	border-spacing: 0;
+	font-size: 14px;
+	background-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+/* lavish sir 
+<style>
+	header{
+		background-color: #455;
+		height: 100px;
+	}
+	@media all and (max-width: 360px){
+		header{
+			background-color: #F00;
+		}
+		.li{
+			display: block;
+		}
+	}
+</style>
