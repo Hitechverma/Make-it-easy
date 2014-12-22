@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Structures</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>Structures</h3></strong>
+	</div>
+	<div>
+		<section>
+			<p>arrays allow you to define type of variables that can hold several data items of the same kind but structure is another user defined data type available in C programming, which allows you to combine data items of different kinds.</p>
+			<h4>Defining a Structure</h4>
+			<p>&nbsp&nbsp&nbsp&nbsp To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member for your program. The format of the struct statement is this:</p>
+			<pre class="brush: cpp">
+					struct [structure tag]
+					{
+					member definition;
+					member definition;
+					...
+					member definition;
+					} [one or more structure variables];
+				</pre>
+				<p>The structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure:</p>
+				<pre class="brush: cpp">
+					struct Books
+					{
+					char 	title[50];
+					char 	author[50];
+					char 	subject[100];
+					int 	book_id;
+					}book;
+				</pre>
+		</section>
+			<section>
+				<h4>Accessing Structure Members</h4>
+				<p>&nbsp &nbsp &nbsp &nbsp To access any member of a structure, we use the member access operator (.). The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use <strong>struct</strong> keyword to define variables of structure type. Following is the example to explain usage of structure:</p>
+				<pre class="brush: cpp">
+					struct Books Book1;
+					struct Books Book2;
+					/* book 1 specification */
+					strcpy( Book1.title, "C Programming" );
+					strcpy( Book1.author, "Nuha Ali" );
+					strcpy( Book1.subject, "C Programming Tutorial" );
+					Book1.book_id = 6495407;
+				</pre>
+			</section>
+				<section>
+					<h4>Structures as Function Arguments</h4>
+					<p>You can pass a structure as a function argument in very similar way as you pass any other variable or pointer. You would access structure variables in the similar way as you have accessed in the above example:</p>
+					<pre class="brush: cpp">
+					/* function declaration */
+					void printBook( struct Books book );
+					/* book 2 specification */
+					strcpy( Book2.title, "Telecom Billing" );
+					strcpy( Book2.author, "Zara Ali" );
+					strcpy( Book2.subject, "Telecom Billing Tutorial" );
+					Book2.book_id = 6495700;
+					/* Print Book2 info */
+					printBook( Book2 );
+					</pre>
+				</section>
+				<section>
+					<h4>Pointers to Structures</h4>
+					<p>You can define pointers to structures in very similar way as you define pointer to any other variable as follows:</p>
+					<pre class="brush: cpp">
+					struct Books *struct_pointer;
+					</pre>
+					<p>Now, you can store the address of a structure variable in the above defined pointer variable. To find the address of a structure variable, place the & operator before the structure's name as follows:</p>
+					<pre class="brush: cpp">
+					struct_pointer = &Book1;
+					</pre>
+					<p>To access the members of a structure using a pointer to that structure, you must use the <strong> -> </strong> operator as follows:</p>
+					<pre class="brush: cpp">
+					struct_pointer->title;
+					</pre>
+				</section>
+	</div>
+</body>
+</html>
