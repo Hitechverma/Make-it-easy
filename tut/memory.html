@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>Memory Management</h3></strong>
+	</div>
+	<div>
+		<section>
+			<p>This chapter will explain dynamic memory management in C. The C programming language provides several functions for memory allocation and management. These functions can be found in the &ltstdlib.h&gt header file.</p>
+			<table>
+				<tr>
+					<th>S.N.</th>
+					<th>Function</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><strong>void *calloc(int num, int size);</strong></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><strong>void free(void *address);</strong></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><strong>void *malloc(int num);</strong></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td><strong>void *realloc(void *address, int newsize);</strong></td>
+				</tr>
+			</table>
+			<h4>Allocating Memory Dynamically</h4>
+			<p>While doing programming, if you are aware about the size of an array, then it is easy and you can define it as an array. For example to store a name of any person, it can go max 100 characters so you can define something as follows:</p>
+			<pre class="brush: cpp" >
+				char name[100];</pre>
+			<p>But now let us consider a situation where you have no idea about the length of the text you need to store, for example you want to store a detailed description about a topic. Here we need to define a pointer to character without defining how much memory is required and later based on requirement we can allocate memory as shown in the below example:</p>
+			<pre class="brush: cpp">
+				#include &ltstdio.h&gt
+				#include &ltstdlib.h&gt
+				#include &ltstring.h&gt
+				int main()
+				{
+				char name[100];
+				char *description;
+				strcpy(name, "Zara Ali" );
+				/* allocate memory dynamically */
+				description = malloc( 200 * sizeof(char) );
+				if( description == NULL )
+				{
+				fprintf(stderr, "Error - unable to allocate required
+				memory\n" );
+				}
+				else
+				{
+				strcpy( description, "Zara ali a DPS student in class 10th" );
+				}
+				printf( "Name = %s\n" , name );
+				printf( "Description: %s\n" , description );
+				}</pre>
+			<h5>Output</h5>
+			<code>
+				Name = Zara Ali<br>
+				Description: Zara ali a DPS student in class 10th
+			</code>
+			<h4>Resizing and Releasing Memory</h4>
+			<p>When your program comes out, operating system automatically release all the memory allocated by your program but as a good practice when you are not in need of memory anymore then you should release that memory by calling the function free() </p>
+			<pre class="brush: cpp">
+				printf( "Name = %s\n" , name );
+				printf( "Description: %s\n" , description );
+				/* release memory using free() function */
+				free(description);</pre>
+		</section>
+	</div>
+</body>
+</html>

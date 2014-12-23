@@ -19,6 +19,43 @@
 		<section>
 			<p>A header file is a file with extension .h which contains C function declarations and macro definitions and to be shared between several source files. There are two types of header files: the files that the programmer writes and the files that come with your compiler.</p>
 			<p>&nbsp&nbsp&nbsp&nbspYou request the use of a header file in your program by including it, with the C preprocessing directive #include like you have seen inclusion of stdio.h header file. which comes along with your compiler</p>
+			<h4>Include Syntax</h4>
+			<p>Both user and system header files are included using the preprocessing directive #include. It has following two forms:</p>
+			<pre class="brush: cpp">
+			
+				#include <file> /*system header files*/
+				#include "file" /*header files of your own program.*/
+			</pre>
+			<h4>Include Operation</h4>
+			<p>The <strong>#include</strong> directive works by directing the C preprocessor to scan the specified file as input before continuing with the rest of the current source file. The output from the preprocessor contains the output already generated, followed by the output resulting from the included file, followed by the output that comes from the text after the <strong>#include</strong> directive. For example, if you have a header file header.h as follows:</p>
+			<pre class="brush: cpp">
+			
+				char *test (void);</pre>
+			<p>and a main program called program.c that uses the header file, like this:</p>
+			<pre class="brush: cpp">
+			int x;
+			#include "header.h"
+			int main (void)
+			{
+			puts (test ());
+			}</pre>
+			<p>the compiler will see the same token stream as it would if program.c read</p>
+			<h4>Computed Includes</h4>
+			<p>Sometimes it is necessary to select one of several different header files to be included into your program. They might specify configuration parameters to be used on different sorts of operating systems, for instance. You could do this with a series of conditionals as follows:</p>
+			<pre class="brush: cpp">
+			#if SYSTEM_1
+			# include "system_1.h"
+			#elif SYSTEM_2
+			# include "system_2.h"
+			#elif SYSTEM_3
+			...
+			#endif</pre>
+			<p>But as it grows, it becomes tedious, instead the preprocessor offers the ability to use a macro for the header name. This is called a computed include. Instead of writing a header name as the direct argument of #include, you simply put a macro name there instead:</p>
+			<pre class="brush: cpp">
+			#define SYSTEM_H "system_1.h"
+			...
+			#include SYSTEM_H</pre>
+			<p>SYSTEM_H will be expanded, and the preprocessor will look for system_1.h as if the #include had been written that way originally. SYSTEM_H could be defined by your Makefile with a -D option.</p>
 		</section>
 	</div>
 </body>
