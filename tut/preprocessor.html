@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PREPROCESSOR</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>Preprocessor</h3></strong>
+	</div>
+	<div>
+		<section>
+			<p>The C Preprocessor is not part of the compiler, but is a separate step in the compilation process. In simplistic terms, a C Preprocessor is just a text substitution tool and they instruct compiler to do required pre-processing before actual compilation. We'll refer to the C Preprocessor as the CPP.</p>
+			<p>&nbsp&nbsp&nbsp&nbspAll preprocessor commands begin with a pound symbol (#). It must be the first nonblank character, and for readability, a preprocessor directive should begin in first column. Following section lists down all important preprocessor directives:</p>
+			<table>
+				<tr>
+					<th>Directive</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>#define</td>
+					<td>Substitutes a preprocessor macro</td>
+				</tr>
+				<tr>
+					<td>#include</td>
+					<td>Inserts a particular header from another file</td>
+				</tr>
+				<tr>
+					<td>#undef</td>
+					<td>Undefines a preprocessor macro</td>
+				</tr>
+				<tr>
+					<td>#ifdef</td>
+					<td>Returns true if this macro is defined</td>
+				</tr>
+				<tr>
+					<td>#ifndef</td>
+					<td>Returns true if this macro is not defined</td>
+				</tr>
+				<tr>
+					<td>#if</td>
+					<td>Tests if a compile time condition is true</td>
+				</tr>
+				<tr>
+					<td>#else</td>
+					<td>The alternative for #if</td>
+				</tr>
+				<tr>
+					<td>#elif</td>
+					<td>#else an #if in one statement</td>
+				</tr>
+				<tr>
+					<td>#endif</td>
+					<td>Ends preprocessor conditional</td>
+				</tr>
+				<tr>
+					<td>#error</td>
+					<td>Prints error message on stderr</td>
+				</tr>
+				<tr>
+					<td>#pragma</td>
+					<td>Issues special commands to the compiler, using a standardized method</td>
+				</tr>
+			</table>
+			<p>Analyze following examples to understand various directives.</p>
+			<pre class="brush: cpp">
+				#define MAX_ARRAY_LENGTH 20</pre>
+			<p>This directive tells the CPP to replace instances of MAX_ARRAY_LENGTH with 20. Use #define for constants to increase readability.</p>
+			<pre class="brush: cpp">
+				#ifndef MESSAGE
+				#define MESSAGE "You wish!"
+				#endif</pre>
+			<p>This tells the CPP to define MESSAGE only if MESSAGE isn't already defined.</p>
+			<pre class="brush: cpp">
+				#ifdef DEBUG 
+				/* Your debugging statements here */ 
+				#endif/pre>
+			<p>This tells the CPP to do the process the statements enclosed if DEBUG is defined. This is useful if you pass the -DDEBUG flag to gcc compiler at the time of compilation. This will define DEBUG, so you can turn debugging on and off on the fly during compilation.</p>
+		</section>
+			<section>
+				<h4>Preprocessor Operators</h4>
+				<p>The C preprocessor offers following operators to help you in creating macros:</p>
+				<h5>Macro Continuation (\)</h5>
+				<p>A macro usually must be contained on a single line. The macro continuation operator is used to continue a macro that is too long for a single line. For example:</p>
+				<pre class="brush: cpp">
+					#define message_for(a, b) \
+					printf(#a " and " #b ": We love you!\n")</pre>
+				<h5>Stringize (#)</h5>
+				<p>The stringize or number-sign operator ('#'), when used within a macro definition, converts a macro parameter into a string constant. This operator may be used only in a macro that has a specified argument or parameter list. For example:</p>
+				<pre class="brush: cpp">
+					#include &ltstdio.h&gt
+					#define message_for(a, b) \
+					printf(#a " and " #b ": We love you!\n")
+					int main( void )
+					{
+					message_for(Carole, Debra);
+					return 0;
+					}</pre>
+				<h5>Token Pasting (##)</h5>
+				<p>The token-pasting operator (##) within a macro definition combines two arguments. It permits two separate tokens in the macro definition to be joined into a single token. For example:</p>
+				<pre class="brush: cpp">
+					#include &ltstdio.h&gt
+					#define tokenpaster(n) printf ("token" #n " = %d", token##n)
+					int main( void )
+					{
+					int token34 = 40;
+					tokenpaster(34);
+					return 0;
+					}</pre>
+				<h5>The defined() Operator</h5>
+				<p>The preprocessor defined operator is used in constant expressions to determine if an identifier is defined using #define. If the specified identifier is defined, the value is true (non-zero). If the symbol is not defined, the value is false (zero). The defined operator is specified as follows:</p>
+				<pre class="brush: cpp">
+					#include &ltstdio.h&gt
+					#if !defined (MESSAGE)
+					#define MESSAGE "You wish!"
+					#endif
+					int main( void )
+					{
+					printf("Here is the message: %s\n", MESSAGE);
+					return 0;
+					}</pre>
+
+			</section>
+	</div>
+</body>
+</html>

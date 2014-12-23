@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FILE</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>File</h3></strong>
+	</div>
+	<div>
+		<section>
+			<p>C programmers can create, open, close text or binary files for their data storage.</p>
+			<p>&nbsp&nbsp&nbspA file represents a sequence of bytes, does not matter if it is a text file or binary file. C programming language provides access on high level functions as well as low level (OS level) calls to handle file on your storage devices. This chapter will take you through important calls for the file management.</p>
+			<h4>Opening a File</h4>
+			<p>&nbsp&nbsp&nbsp&nbspYou can use the fopen( ) function to create a new file or to open an existing file, this call will initialize an object of the type FILE, which contains all the information necessary to control the stream. Following is the prototype of this function call:</p>
+			<pre class="brush: cpp">
+				FILE *fopen( const char * filename, const char * mode );	
+			</pre>
+			<p>Here, filename is string literal, which you will use to name your file and access mode can have one of the following values:</p>
+				<table>
+					<tr>
+						<th>Mode</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>r</td>
+						<td>Opens an existing text file for reading purpose.</td>
+					</tr>
+					<tr>
+						<td>w</td>
+						<td>Opens a text file for writing, if it does not exist then a new file is created. Here your program will start writing content from the beginning of the file.</td>
+					</tr>Closing a File
+					<tr>
+						<td>a</td>
+						<td>Opens a text file for writing in appending mode, if it does not exist then a new file is created.</td>
+					</tr>
+					<tr>
+						<td>r+</td>
+						<td>Opens a text file for reading and writing both.</td>
+					</tr>
+					<tr>
+						<td>w+</td>
+						<td>Opens a text file for reading and writing both. It first truncate the file to zero length if it exists otherwise create the file if it does not exist.</td>
+					</tr>
+					<tr>
+						<td>a+</td>
+						<td>Opens a text file for reading and writing both. It creates the file if it does not exist</td>
+					</tr>
+				</table>
+				<h4>Closing a File</h4>
+				<p>To close a file, use the fclose( ) function. The prototype of this function is:</p>
+				<pre class="brush: cpp">
+					int fclose( FILE *fp );
+				</pre>
+				<p>The fclose( ) function returns zero on success, or EOF if there is an error in closing the file. This function actually, flushes any data still pending in the buffer to the file, closes the file, and releases any memory used for the file. The EOF is a constant defined in the header file stdio.h.</p>
+		</section>
+			<section>
+				<h4>Writing a File</h4>
+				<p>Following is the simplest function to write individual characters to a stream:</p>
+				<pre class="brush: cpp">
+					int fputc( int c, FILE *fp );
+				</pre>
+				<p>The function fputc() writes the character value of the argument c to the output stream referenced by fp. It returns the written character written on success otherwise EOF if there is an error. You can use the following functions to write a null-terminated string to a stream:</p>
+				<pre class="brush: cpp">
+					int fputs( const char *s, FILE *fp );
+				</pre>
+				<p>The function fputs() writes the string s to the output stream referenced by fp. It returns a non-negative value on success</p>
+				<p>&nbsp&nbsp&nbsp&nbspTry the following example:</p>
+				<pre class="brush: cpp">
+					#include &ltstdio.h&gt
+					main()
+					{
+					FILE *fp;
+					fp = fopen("/tmp/test.txt", "w+");
+					fprintf(fp, "This is testing for fprintf...\n");
+					fputs("This is testing for fputs...\n", fp);
+					fclose(fp);
+					}
+				</pre>
+				<p>When the above code is compiled and executed, it creates a new file test.txt in /tmp directory and writes two lines using two different functions. Let us read this file in next section</p>
+				<h4>Reading a File</h4>
+				<p>Following is the simplest function to read a single character from a file:</p>
+				<pre class="brush: cpp">
+					int fgetc( FILE * fp );
+				</pre>
+				<p>The fgetc() function reads a character from the input file referenced by fp. The return value is the character read, or in case of any error it returns EOF. The following functions allow you to read a string from a stream:</p>
+				<pre class="brush: cpp">
+					char *fgets( char *buf, int n, FILE *fp );
+				</pre>
+				<p>The functions fgets() reads up to n - 1 characters from the input stream referenced by fp. It copies the read string into the buffer buf, appending a null character to terminate the string. Program:</p>
+				<pre class="brush: cpp">
+					#include &ltstdio.h&gt
+					main()
+					{
+					FILE *fp;
+					char buff[ 100 ];
+					fp = fopen("/tmp/test.txt", "r");
+					fscanf(fp, "%s", buff);
+					printf("1 : %s\n", buff );
+					fgets(buff, 255 , (FILE*)fp);
+					printf("2: %s\n", buff );
+					fgets(buff, 255 , (FILE*)fp);
+					printf("3: %s\n", buff );
+					fclose(fp);
+					}
+				</pre>
+				<p>When the above code is compiled and executed, it reads the file created in previous section and produces the following result:</p>
+				<code>
+					1 : This <br>
+					2 : is testing for fprintf...<br>
+					3: This is testing for fputs...<br>
+				</code>
+			</section>
+	</div>
+</body>
+</html>
