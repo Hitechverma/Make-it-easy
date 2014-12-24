@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>Loops</h3></strong>
+	</div>
+	<div>
+		<section>
+			<p>&nbsp&nbsp&nbsp&nbspA loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages</p>
+			<img src="../imgs/loop.jpg">
+			<p>C programming language provides the following types of loops to handle looping requirements.</p>
+		</section>
+		<section>
+			<h4>While loop</h4>
+			<p>&nbsp&nbsp&nbsp&nbspA while loop statement in C programming language repeatedly executes a target statement as long as a given condition is true.</p>
+			<h5>Flow diagram</h5>
+			<img src="../imgs/while.jpg">
+			<h5>Syntax</h5>
+			<pre class="brush: cpp">
+				while(condition)
+				{
+				statement(s);
+				}
+			</pre>
+			<p>&nbsp&nbsp&nbsp&nbspHere, statement(s) may be a single statement or a block of statements. The condition may be any expression, and true is any nonzero value. The loop iterates while the condition is true.<br>When the condition becomes false, program control passes to the line immediately following the loop </p>
+		</section>
+		<section>
+			<h4>For Loop</h4>
+			<p>A for loop is a repetition control structure that allows you to efficiently write a loop that needs to execute a specific number of times.</p>
+			<h5>Flow diagram</h5>
+			<img src="../imgs/for.jpg">
+			<h5>Syntax</h5>
+			<pre class="brush: cpp">
+				for ( init; condition; increment )
+				{
+				statement(s);
+				}
+			</pre>
+			<p>&nbsp&nbsp&nbspHere is the flow of control in a for loop:</p>
+			<ul>
+				<li><code>The init step is executed first, and only once. This step allows you to declare and initialize any loop control variables. You are not required to put a statement here, as long as a semicolon appears.</code></li>
+				<li><code>Next, the condition is evaluated. If it is true, the body of the loop is executed. If it is false, the body of the loop does not execute and flow of control jumps to the next statement just after the for loop.</code></li>
+				<li><code>After the body of the for loop executes, the flow of control jumps back up to the increment statement. This statement allows you to update any loop control variables. This statement can be left blank, as long as a semicolon appears after the condition.</code></li>
+				<li><code>The condition is now evaluated again. If it is true, the loop executes and the process repeats itself (body of loop, then increment step, and then again condition). After the condition becomes false, the for loop terminates.</code></li>
+			</ul>
+		</section>
+		<section>
+				<h4>Do..While Loop</h4>
+				<code>Unlike for and while loops, which test the loop condition at the top of the loop, the do...while loop in C programming language checks its condition at the bottom of the loop. 
+				<br>A do...while loop is similar to a while loop, except that a do...while loop is guaranteed to execute at least one time.</code>
+				<h5>Flow diagram</h5>
+				<img src="../imgs/do.jpg">
+				<h5>Syntax</h5>
+				<pre class="brush: cpp">
+					do
+					{
+					statement(s);
+					}while( condition );
+				</pre>
+		</section>
+		<section>
+				<h4>Nested Loops</h4>
+				<p>&nbsp&nbsp&nbspC programming language allows to use one loop inside another loop. Following section shows few examples to illustrate the concept.</p>
+				<h5>Syntax</h5>
+				<code>The syntax for a nested for loop statement in C is as follows:</code>
+				<pre class="brush: cpp">
+					for ( init; condition; increment )
+					{
+					for ( init; condition; increment )
+					{
+					statement(s);
+					}
+					statement(s);
+					}
+				</pre>
+				<code>The syntax for a nested while loop statement in C programming language is as follows:</code>
+				<pre class="brush: cpp">
+					while(condition)
+					{
+					while(condition)
+					{
+					statement(s);
+					}
+					statement(s);
+					}
+				</pre>
+		</section>
+	</div>
+</body>
+</html>

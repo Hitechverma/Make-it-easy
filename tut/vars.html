@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+</head>
+<body>
+	<div id="header">
+		<strong><h3>Variables</h3></strong>
+	</div>
+		<div>
+			<p>
+				A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.<br/>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in previous chapter, there will be the following basic variable types:
+			</p>
+			<table>
+				<tr>
+					<th>Type</th>
+					<th>Discription</th>
+				</tr>
+				<tr>
+					<td>Char</td>
+					<td>Typically a single octet(one byte). This is an integer type.</td>
+				</tr>
+				<tr>
+					<td>Int</td>
+					<td>The most natural size of integer for the machine.</td>
+				</tr>
+				<tr>
+					<td>Float</td>
+					<td>A single-precision floating point value.</td>
+				</tr>
+				<tr>
+					<td>Double</td>
+					<td>A double-precision floating point value.</td>
+				</tr>
+				<tr>
+					<td>Void</td>
+					<td>Represents the absence of type.</td>
+				</tr>
+			</table>
+			<p>C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types.</p>
+				<h3>Variable Definition in C:</h3>
+				<p>A variable definition means to tell the compiler where and how much to create the storage for thevariable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows:</p>
+				<div class="case">
+					<code>
+						type variable_list;<br/>
+						int 	i, j, k;<br/>
+						char 	c, ch;<br/>
+						float 	f, salary;<br/>
+						double 	d;<br/>
+					</code>
+				</div>
+				<p>The line int i, j, k; both declares and defines the variables i, j and k; which instructs the compiler to create variables named i, j and k of type int.
+				<br>
+				&nbsp&nbsp&nbsp&nbsp&nbspVariables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows:
+				</p>
+				<div class="case">
+					<code>
+						extern int d = 3, f = 5;<br>
+						int d = 3, f = 5;<br>
+						byte z = 22;<br>
+						char x = 'x';<br>
+					</code>
+				</div>
+		</div>
+</body>
+</html>

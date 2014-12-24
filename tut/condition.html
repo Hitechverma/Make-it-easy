@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Condition</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>Conditional Statements</h3></strong>
+	</div>
+	<div>
+		<section>
+			<p>Decision making structures require that the programmer specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
+			<br>Following is the general form of a typical decision making structure found in most of the programming languages:</p>
+			<img src="../imgs/condi.jpg">
+		</section>
+		<section>
+			<h4>If statement</h4>
+			<p>An if statement consists of a boolean expression followed by one or more statements.</p>
+			<h5>Flow diagram</h5>
+			<img src="../imgs/if.jpg">
+			<h5>Syntax</h5>
+			<pre class="brush: cpp">
+			if(boolean_expression)
+			{
+			/* statement(s) will execute if the boolean expression is true */
+			}
+			</pre>
+			<p>If the boolean expression evaluates to true, then the block of code inside the if statement will be executed. If boolean expression evaluates to false, then the first set of code after the end of the if statement (after the closing curly brace) will be executed.
+			<br>&nbsp&nbspC programming language assumes any non-zero and non-null values as true and if it is either zero or null then it is assumed as false value.</p>
+		</section>
+		<section>
+			<h4>if...else statement</h4>
+			<p>An if statement can be followed by an optional else statement, which executes when the boolean expression is false.</p>
+			<h5>Flow diagram</h5>
+			<img src="../imgs/ifelse.jpg">
+			<h5>Syntax</h5>
+			<pre class="brush: cpp">
+				if(boolean_expression)
+				{
+				/* statement(s) will execute if the boolean expression is true */
+				}
+				else
+				{
+				/* statement(s) will execute if the boolean expression is false */
+				}
+			</pre>
+			<p>If the boolean expression evaluates to true, then the if block of code will be executed, otherwise else block of code will be executed.
+			<br>&nbsp&nbsp&nbspC programming language assumes any non-zero and non-null values as true and if it is either zero or null then it is assumed as false value.</p>
+		</section>
+		<section>
+			<h4>The if...else if...else Statement</h4>
+			<p>An if statement can be followed by an optional else if...else statement, which is very useful to test various conditions using single if...else if statement.
+			<br>&nbsp&nbsp&nbsp When using <strong>if , else if ,</strong> else statements there are few points to keep in mind:</p>
+			<ul>
+				<li><p>An if can have zero or one else's and it must come after any else if's.</p></li>
+				<li><p>An if can have zero to many else if's and they must come before the else.</p></li>
+				<li><p>Once an else if succeeds, none of the remaining else if's or else's will be tested.</p></li>
+			</ul>
+			<h5>Syntax</h5>
+			<pre class="brush: cpp">
+				if(boolean_expression 1 )
+				{
+				/* Executes when the boolean expression 1 is true */
+				}
+				else if( boolean_expression 2 )
+				{
+				/* Executes when the boolean expression 2 is true */
+				}
+				else if( boolean_expression 3 )
+				{
+				/* Executes when the boolean expression 3 is true */
+				}
+				else
+				{
+				/* executes when the none of the above condition is true */
+				}
+			</pre>
+		</section>
+		<section>
+			<h4>Switch statement</h4>
+			<p>A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.</p>
+			<h5>Flow diagram</h5>
+			<img src="../imgs/switch.jpg">
+			<h5>Syntax</h5>
+			<pre class="brush: cpp">
+				switch(expression){
+				case constant-expression :
+				statement(s);
+				break; /* optional */
+				case constant-expression :
+				statement(s);
+				break; /* optional */
+				/* you can have any number of case statements */
+				default : /* Optional */
+				statement(s);
+				}
+			</pre>
+			Rules of Switch:
+			<ul>
+				<li><p>The expression used in a switch statement must have an integral or enumerated type, or be of a class type in which the class has a single conversion function to an integral or enumerated type.</p></li>
+				<li><p>The constant-expression for a case must be the same data type as the variable in the switch, and it must be a constant or a literal.</p></li>
+				<li><p>When the variable being switched on is equal to a case, the statements following that case will execute until a break statement is reached.</p></li>
+				<li><p>A switch statement can have an optional default case, which must appear at the end of the switch. The default case can be used for performing a task when none of the cases sis true. No break is needed in the default case.</p></li>
+			</ul>
+		</section>
+
+	</div>
+</body>
+</html>

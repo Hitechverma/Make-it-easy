@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="page">
+<head>
+	<title>Program Structure</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+</head>
+<body>
+	<div id="header">
+		<header><strong><h2>C Program Structure</h2> </strong></header>
+	</div>
+	<div>
+		<p>
+			Before we study basic building blocks of the C programming language, let us look a bare minimum C program structure so that we can take it as a reference in upcoming chapters
+		</p>
+		<h3>C Hello World Example</h3>
+		<p>
+			A C program basically consists of the following parts:</p>
+			<ul>
+				<li>Preprocessor Commands</li>
+				<li>Functions</li>
+				<li>Variables</li>
+				<li>Statements & Expressions</li>
+				<li>Comments</li>
+			</ul>
+		<p>Let us look at a simple code that would print the words <strong>"Hello World"</strong>:</p>
+	</div>
+	<div >
+		<pre class="case">
+	#include &lt stdio.h &gt
+	int main()
+	{
+	/* my first program in C */
+	printf("Hello, World! \n");
+	return 0;
+	}
+		</pre>
+	</div>
+	<div>
+		<strong>Compile & Execute C Program</strong>
+		<p>Let's look at how to save the source code in a file, and how to compile and run it. Followingare the simple steps:</p>
+		<ol>
+			<li>Open a text editor and add the above-mentioned code.</li>
+			<li>Save the file as <strong>hello.c</strong></li>
+			<li>Open a command prompt and go to the directory where you saved the file.</li>
+			<li>Type <strong>gcc hello.c</strong> and press enter to compile your code.</li>
+			<li>If there are no errors in your code, the command prompt will take you to the next line and would generate <strong>a.out</strong> executable file.</li>	
+			<li>Now, type <strong>a.out</strong> to execute your program.</li>
+			<li>You will be able to see <strong>"Hello World"</strong>  printed on the screen</li>
+		</ol>
+	</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Types</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div id="header">
+		<strong><h3>C Data Types</h3></strong>
+	</div>
+		<div>
+			<p>In the C programming language, data types refer to an extensive system used fordeclaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted.<br/>
+			The types in C can be classified as follows:
+			</p>
+			<table >
+				<tr>
+					<th>S.N.</th>
+					<th>Types and Description</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><strong>Basic Types:</strong><br/>They are arithmetic types and consists of the two types: (a) integer types and (b) floating-point types.</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><strong>Enumerated types:</strong><br/>They are again arithmetic types and they are used to define variables that can only be assigned certain discrete integer values throughout the program.</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><strong>The type void:</strong><br/>The type specifier void indicates that no value is available.</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td><strong>Derived types:</strong><br/>They include (a) Pointer types, (b) Array types, (c) Structure types, (d) Union types and (e) Function types.</td>
+				</tr>
+			</table>
+			<p> &nbsp&nbsp&nbsp&nbspThe array types and structure types are referred to collectively as the aggregate types. The type of a function specifies the type of the function's return value. We will see basic types in the following section, whereas, other types will be covered in the upcoming chapters.</p>
+			<h3>Integer Types</h3>
+				<p>Following table gives you details about standard integer types with its storage sizes and value ranges:</p>
+				<table>
+					<tr>
+						<th>Type</th>
+						<th>Storage size</th>
+						<th>Value Range</th>
+					</tr>
+					<tr>
+						<td>Char</td>
+						<td>1 byte</td>
+						<td>-128 to 127 or 0 to 255</td>
+					</tr>
+					<tr>
+						<td>unsigned char</td>
+						<td>1 byte</td>
+						<td>0 to 255</td>
+					</tr>
+					<tr>
+						<td>signed char</td>
+						<td>1 byte</td>
+						<td>-128 to 127</td>
+					</tr>
+					<tr>
+						<td>Int</td>
+						<td>2 or 4 byte</td>
+						<td>-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647</td>
+					</tr>
+					<tr>
+						<td>unsigned int</td>
+						<td>2 or 4 byte</td>
+						<td>0 to 65,535 or 0 to 4,294,967,295</td>
+					</tr>
+					<tr>
+						<td>Short</td>
+						<td>2 byte</td>
+						<td>-32,768 to 32,767</td>
+					</tr>
+					<tr>
+						<td>unsigned short</td>
+						<td>2 byte</td>
+						<td>0 to 65,535</td>
+					</tr>
+					<tr>
+						<td>Long</td>
+						<td>4 byte</td>
+						<td>-2,147,483,648 to 2,147,483,647</td>
+					</tr>
+					<tr>
+						<td>unsigned long</td>
+						<td>4 byte</td>
+						<td>0 to 4,294,967,295</td>
+					</tr>
+				</table>
+				<p>To get the exact size of a type or a variable on a particular platform, you can use the sizeof operator. The expressions sizeof(type) yields the storage size of the object or type in bytes. Following is an example to get the size of int type on any machine</p>
+				<pre class="brush: cpp">
+				#include &lt stdio.h &gt 
+				#include &lt limits.h &gt
+				int main()
+				{
+				printf("Storage size for int : %d \n", sizeof(int));
+				return 0 ;
+				}</pre>
+				<p>When you compile and execute the above program, it produces the following result on Linux:</p>
+				<code class="case">Storage size for int : 4</code>
+		</div>
+
+</body>
+</html>
