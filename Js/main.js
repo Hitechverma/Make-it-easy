@@ -3,6 +3,9 @@ $(document).ready(function(){
 	$("#base").hide();
 	$("#adv").hide();
 	$("#sidebar").hide();
+	$("#close").click(function(){
+		$("#sidebar").hide("slow");
+	})
 	$("#basic").click(function(){
 		$("#base").fadeToggle("slow");
 	})

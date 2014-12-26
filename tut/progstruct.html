@@ -3,10 +3,22 @@
 <head>
 	<title>Program Structure</title>
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
 </head>
 <body>
-	<div id="header">
-		<header><strong><h2>C Program Structure</h2> </strong></header>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h2>Program Structure</h2></li></div>
+		</ul>
 	</div>
 	<div>
 		<p>
@@ -25,7 +37,7 @@
 		<p>Let us look at a simple code that would print the words <strong>"Hello World"</strong>:</p>
 	</div>
 	<div >
-		<pre class="case">
+		<pre class="brush: cpp">
 	#include &lt stdio.h &gt
 	int main()
 	{
@@ -33,7 +45,7 @@
 	printf("Hello, World! \n");
 	return 0;
 	}
-		</pre>
+	</pre>
 	</div>
 	<div>
 		<strong>Compile & Execute C Program</strong>

@@ -3,10 +3,22 @@
 <head>
 	<title>Program Structure</title>
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
 </head>
 <body>
-	<div id="header">
-		<strong><h3>Basic Syntax</h3></strong>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h2>Basic Syntax</h2></li></div>
+		</ul>
 	</div>
 	<div>
 		<p>ou have seen a basic structure of C program, so it will be easy to understand otherbasic building blocks of the C programming language.
@@ -15,11 +27,12 @@
 		<p>
 			A C program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol. For example, the following C statement consists of five tokens:
 		</p>
-			<pre class="case">printf("Hello, World! \n");</pre>
+			<pre class="brush: cpp">
+			printf("Hello, World! \n");</pre>
 		<h4>Comments</h4>
 		<p>Comments are like helping text in your C program and they are ignored by the compiler. They start with /* and terminates with the characters */ as shown below:
 		</p>
-			<pre class="case">/* my first program in C */</pre>
+			<pre class="brush: cpp">/* my first program in C */</pre>
 		<h4>Identifiers</h4>
 		<p>A C identifier is a name used to identify a variable, function, or any other user-defined item. An identifier starts with a letter A to Z or a to z or an underscore _ followed by zero or more letters, underscores, and digits (0 to 9).<br/>
 		&nbsp&nbsp&nbsp&nbsp C does not allow punctuation characters such as @, $, and % within identifiers. C is a case sensitive programming language. Thus, Manpower and manpower are two different identifiers in C. Here are some examples of acceptable identifiers:

@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
 	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
 	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
 	<script type="text/javascript" src="../Js/shCore.js"></script>
 	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
 	<script type="text/javascript">
@@ -12,8 +14,11 @@
 	</script>
 </head>
 <body>
-	<div id="header">
-		<strong><h3>Conditional Statements</h3></strong>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h2>Conditional Statements</h2></li></div>
+		</ul>
 	</div>
 	<div>
 		<section>
@@ -31,8 +36,7 @@
 			if(boolean_expression)
 			{
 			/* statement(s) will execute if the boolean expression is true */
-			}
-			</pre>
+			}</pre>
 			<p>If the boolean expression evaluates to true, then the block of code inside the if statement will be executed. If boolean expression evaluates to false, then the first set of code after the end of the if statement (after the closing curly brace) will be executed.
 			<br>&nbsp&nbspC programming language assumes any non-zero and non-null values as true and if it is either zero or null then it is assumed as false value.</p>
 		</section>
@@ -50,8 +54,7 @@
 				else
 				{
 				/* statement(s) will execute if the boolean expression is false */
-				}
-			</pre>
+				}</pre>
 			<p>If the boolean expression evaluates to true, then the if block of code will be executed, otherwise else block of code will be executed.
 			<br>&nbsp&nbsp&nbspC programming language assumes any non-zero and non-null values as true and if it is either zero or null then it is assumed as false value.</p>
 		</section>
@@ -67,22 +70,21 @@
 			<h5>Syntax</h5>
 			<pre class="brush: cpp">
 				if(boolean_expression 1 )
-				{
-				/* Executes when the boolean expression 1 is true */
-				}
+					{
+					/* Executes when the boolean expression 1 is true */
+					}
 				else if( boolean_expression 2 )
-				{
-				/* Executes when the boolean expression 2 is true */
-				}
+					{
+					/* Executes when the boolean expression 2 is true */
+					}
 				else if( boolean_expression 3 )
-				{
-				/* Executes when the boolean expression 3 is true */
-				}
+					{
+					/* Executes when the boolean expression 3 is true */
+					}
 				else
-				{
-				/* executes when the none of the above condition is true */
-				}
-			</pre>
+					{
+					/* executes when the none of the above condition is true */
+					}</pre>
 		</section>
 		<section>
 			<h4>Switch statement</h4>

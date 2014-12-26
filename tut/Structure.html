@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
 	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
 	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
 	<script type="text/javascript" src="../Js/shCore.js"></script>
 	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
 	<script type="text/javascript">
@@ -12,8 +14,11 @@
 	</script>
 </head>
 <body>
-	<div id="header">
-		<strong><h3>Structures</h3></strong>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h2>Structure</h2></li></div>
+		</ul>
 	</div>
 	<div>
 		<section>
@@ -27,8 +32,7 @@
 					member definition;
 					...
 					member definition;
-					} [one or more structure variables];
-				</pre>
+					} [one or more structure variables];</pre>
 				<p>The structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure:</p>
 				<pre class="brush: cpp">
 					struct Books
@@ -50,8 +54,7 @@
 					strcpy( Book1.title, "C Programming" );
 					strcpy( Book1.author, "Nuha Ali" );
 					strcpy( Book1.subject, "C Programming Tutorial" );
-					Book1.book_id = 6495407;
-				</pre>
+					Book1.book_id = 6495407;</pre>
 			</section>
 				<section>
 					<h4>Structures as Function Arguments</h4>
@@ -65,8 +68,7 @@
 					strcpy( Book2.subject, "Telecom Billing Tutorial" );
 					Book2.book_id = 6495700;
 					/* Print Book2 info */
-					printBook( Book2 );
-					</pre>
+					printBook( Book2 );</pre>
 				</section>
 				<section>
 					<h4>Pointers to Structures</h4>

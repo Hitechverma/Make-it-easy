@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
 	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
 	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="../Js/main.js"></script>
 	<script type="text/javascript" src="../Js/shCore.js"></script>
 	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
 	<script type="text/javascript">
@@ -12,10 +14,22 @@
 	</script>
 </head>
 <body>
-	<div id="header">
-		<strong><h3>Function</h3></strong>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h2>Functions</h2></li></div>
+		</ul>
 	</div>
-	<div>
+	<div id="sidebar">
+		<ul>
+			<!-- <li id="close"><img src="../imgs/Close.png"></li> -->
+			<li>Home</li>
+			<li>Programs</li>
+			<li>About app</li>
+			<li>About Us</li>
+		</ul>
+	</div>
+	<div id="main">
 		<section>
 			<p>Function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.<br>&nbsp&nbsp&nbsp&nbsp You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is so each function performs a specific task.<br> &nbsp&nbsp&nbsp&nbsp A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.<br>&nbsp&nbsp&nbsp&nbsp The C standard library provides numerous built-in functions that your program can call. For example, function strcat() to concatenate two strings, function memcpy() to copy one memory location to another location and many more functions.</p>
 			<h4>Defining A Function</h4>

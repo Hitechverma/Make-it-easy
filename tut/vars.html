@@ -3,10 +3,22 @@
 <head>
 	<title>Variables</title>
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="Js/main.js"></script>
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
 </head>
 <body>
-	<div id="header">
-		<strong><h3>Variables</h3></strong>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h2>Variables</h2></li></div>
+		</ul>
 	</div>
 		<div>
 			<p>
@@ -42,7 +54,7 @@
 			<p>C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types.</p>
 				<h3>Variable Definition in C:</h3>
 				<p>A variable definition means to tell the compiler where and how much to create the storage for thevariable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows:</p>
-				<div class="case">
+				<div class="brush: cpp">
 					<code>
 						type variable_list;<br/>
 						int 	i, j, k;<br/>
@@ -55,7 +67,7 @@
 				<br>
 				&nbsp&nbsp&nbsp&nbsp&nbspVariables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows:
 				</p>
-				<div class="case">
+				<div class="brush:cpp">
 					<code>
 						extern int d = 3, f = 5;<br>
 						int d = 3, f = 5;<br>
