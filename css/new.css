@@ -4,6 +4,15 @@ p{
 body{
 	background-color: rgb(238,239,243);
 }
+#mpage{
+	background-color: rgb(34,34,34);
+}
+#mpage .nav {
+	background-color: rgb(107,212,208);
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	padding-bottom: 5px;
+}
 .nav h1{
 	color: white;
 }
@@ -74,39 +83,41 @@ body{
 	margin:auto;
 }
 #new{
-	margin-top: 10%;
+	margin-left: -10%;
+	margin-top: 30px;
 }
-
 .quad{
-	display: block;
-	padding: 1%;
-	/*border: 3px solid black;*/
-	width: 45%;
+	border width: 10px;
+	border-style: double;
+	/*width: 40%;*/
+	border-radius: 50%;
+	display:inline-block;
+	float: left;
+	padding:5px;
+	margin: 5%;
+	height: 100px;
 	text-align: center;
+	list-style: none;
+}
+.quad ul{
+	margin-left:-20%;
 
 }
-.quad h1{
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-#tut{
-	float: left;
-}
-#prog{
-	float: right;
-	margin-right: 5%;
-}
-#down{
-	padding-top: 25px;
-	clear: both;
-}
-#faq{
-	float: left;
+.quad li{
+	padding-top: 20%;
 }
 #contact{
-	float: right;
-	margin-right: 5%;
+	clear: both;
+	margin-left: 25%;
+	border-color: rgb(255,131,167);
 }
+#tut{
+	border-color: rgb(255,98,63);
+}
+#prog{
+	border-color:rgb(88,178,164); 
+}
+
 .case{
 	background-color: #eee;
 }

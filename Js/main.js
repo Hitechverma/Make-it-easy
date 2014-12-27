@@ -8,9 +8,11 @@ $(document).ready(function(){
 	})
 	$("#basic").click(function(){
 		$("#base").fadeToggle("slow");
+		$("#adv").hide("slow");
 	})
 	$("#advance").click(function(){
 		$("#adv").toggle("slow");
+		$("#base").hide("slow");
 	})
 	$("#btn").click(function(){
 		$("#sidebar").toggle("slow");
