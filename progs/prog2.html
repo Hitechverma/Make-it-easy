@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<title>Program</title>
+	<title>Programs</title>
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
 	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
 	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
@@ -30,25 +29,26 @@
 		</ul>
 	</div>
 	<div>
-		<h4>Program to find sum of two numbers.</h4>
+		<h4>Program to find the simple interest.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
 			void main()
 			{
-			int a,b,s;
+			int p,r,t,si;
 			clrscr();
-			printf("Enter two no: ");
-			scanf("%d%d",&a,&b);
-			s=a+b;
-			printf("sum=%d",s);
+			printf("enter principle, Rate of interest & time to find simple interest: ");
+			scanf("%d%d%d",&p,&r,&t);
+			si=(p*r*t)/100;
+			printf("simple intrest= %d",si);
 			getch();
 			}</pre>
 		<h5>Output:</h5>
 		<code>
-			Enter two no: 5
-			<br>6
-			<br>sum=11
+			enter principle, rate of interest & time to find simple interest: 500
+			<br>5
+			<br>2
+			<br>simple interest=50
 		</code>
 	</div>
 </body>
