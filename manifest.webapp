@@ -1,0 +1,19 @@
+{
+  "name": "Hello Hitech",
+  "description": "This is a C language tutorial handbook app.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icon.png"
+  },
+  "developer": {
+    "name": "Hitech",
+    "url": "http://www.facebook.com/hitechverma"
+  },
+  "default_locale": "en",
+  "permissions": {
+    "geolocation": {
+      "description": "It is a simple app."
+    }
+  }
+}
+

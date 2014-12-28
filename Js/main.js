@@ -17,6 +17,21 @@ $(document).ready(function(){
 	$("#btn").click(function(){
 		$("#sidebar").toggle("slow");
 	})
+
+	// Fadeing animation
+	$("body").css("display", "none");
+ 
+    $("body").fadeIn(1000);
+ 
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(2000, redirectPage);     
+    });
+         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
 })
 
 
