@@ -29,14 +29,35 @@
 		</ul>
 	</div>
 	<div>
-		<h4></h4>
+		<h4>Program to print a table of any number.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
-			</pre>
+			void main()
+			{
+			int gs,bs,da,ta;
+			clrscr();
+			printf("enter basic salary: ");
+			scanf("%d",&bs);
+			da=(10*bs)/100;
+			ta=(12*bs)/100;
+			gs=bs+da+ta;
+			printf("gross salary=%d",gs);
+			getch();
+			}</pre>
 		<h5>Output:</h5>
 		<code>
-			
+			enter a no to know table: 2
+			<br>2*1=2
+			<br>2*2=4
+			<br>2*3=6
+			<br>2*4=8
+			<br>2*5=10
+			<br>2*6=12
+			<br>2*7=14
+			<br>2*8=16
+			<br>2*9=18
+			<br>2*10=20
 		</code>
 	</div>
 </body>

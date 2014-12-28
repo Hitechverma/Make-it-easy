@@ -77,7 +77,9 @@ body{
   height: 40px;
   border-bottom: 1px solid #888;
 }
-
+.pros ul{
+	list-style: none;
+}
 #main{
 	position: relative;
 	margin:auto;
@@ -131,7 +133,21 @@ table{
 	background-color: #eee;
 }
 
+@media all and (min-width:400px){
+	.quad{
+	padding:30px;
+	margin: 10%;
+}
+#contact{
+	clear: both;
+	margin-left: 25%;
+	border-color: rgb(255,131,167);
+}
+#new{
+	margin-left: 20%;
+}
 
+}
 
 
 

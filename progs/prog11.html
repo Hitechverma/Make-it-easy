@@ -29,28 +29,51 @@
 		</ul>
 	</div>
 	<div>
-		<h4>Program to find area and circumference of circle.</h4>
+		<h4>Program to display arithmetic operator using switch case.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
 			void main()
 			{
-			int r;
-			float pi=3.14,area,ci;
+			int a,b,n,s,m,su,d;
 			clrscr();
-			printf("enter radius of circle: ");
-			scanf("%d",&r);
-			area=pi*r*r;
-			printf("area of circle=%f ",area);
-			ci=2*pi*r;
-			printf("circumference=%f ",ci);
+			printf("enter two no’s : ");
+			scanf("%d%d",&a,&b);
+			printf("enter 1 for sum\n2 for multiply\n3for subtraction\n4 for division: ");
+			scanf("%d",&n);
+			switch(n)
+			{
+			case 1:
+			s=a+b;
+			printf("sum=%d",s);
+			break;
+			case 2:
+			m=a*b;
+			printf("multiply=%d",m);
+			break;
+			case 3:
+			su=a-b;
+			printf("subtraction=%d",su);
+			break;
+			case 4:
+			d=a/b;
+			printf("divission=%d",d);
+			break;
+			default:
+			printf("wrong input");
+			break;
+			}
 			getch();
 			}</pre>
-		<h5>Output:</h5>
+			<h5>Output:</h5>
 		<code>
-			enter radius of a circle: 5
-			<br>area of circle=78.000
-			<br>circumference=31.4
+			enter two no's: 8
+			<br>4
+			<br>enter 1 for sum
+			<br>2 for multiply
+			<br>3 for subtraction
+			<br>4 for division: 1
+			<br>sum=12
 		</code>
 	</div>
 </body>

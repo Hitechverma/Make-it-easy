@@ -29,28 +29,27 @@
 		</ul>
 	</div>
 	<div>
-		<h4>Program to find area and circumference of circle.</h4>
+		<h4>Program to find factorial of a number.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
 			void main()
 			{
-			int r;
-			float pi=3.14,area,ci;
+			int n,i,fact=1;
 			clrscr();
-			printf("enter radius of circle: ");
-			scanf("%d",&r);
-			area=pi*r*r;
-			printf("area of circle=%f ",area);
-			ci=2*pi*r;
-			printf("circumference=%f ",ci);
+			printf("Enter any no: ");
+			scanf("%d",&n);
+			for(i=n;i>=1;i--)
+			{
+			fact=fact*i;
+			}
+			printf("Factorial=%d",fact);
 			getch();
 			}</pre>
 		<h5>Output:</h5>
 		<code>
-			enter radius of a circle: 5
-			<br>area of circle=78.000
-			<br>circumference=31.4
+			Enter a no: 5
+			<br>Factorial=120
 		</code>
 	</div>
 </body>

@@ -29,28 +29,32 @@
 		</ul>
 	</div>
 	<div>
-		<h4>Program to find area and circumference of circle.</h4>
+		<h4>Program to find whether given no. is a prime no. or not.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
 			void main()
 			{
-			int r;
-			float pi=3.14,area,ci;
+			int i,n,r=0;
 			clrscr();
-			printf("enter radius of circle: ");
-			scanf("%d",&r);
-			area=pi*r*r;
-			printf("area of circle=%f ",area);
-			ci=2*pi*r;
-			printf("circumference=%f ",ci);
+			printf("Enter any no: ");
+			scanf("%d",&n);
+			for(i=2;i<=n-1;i++)
+			{
+			if(n%i==0)
+			r=1;
+			break;
+			}
+			if(r==0)
+			printf("prime no");
+			else
+			printf("Not prime");
 			getch();
 			}</pre>
 		<h5>Output:</h5>
 		<code>
-			enter radius of a circle: 5
-			<br>area of circle=78.000
-			<br>circumference=31.4
+			Enter any no: 16
+			<br>Not prime
 		</code>
 	</div>
 </body>

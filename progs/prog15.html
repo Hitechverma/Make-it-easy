@@ -29,29 +29,32 @@
 		</ul>
 	</div>
 	<div>
-		<h4>Program to find area and circumference of circle.</h4>
+		<h4>Program to print stars Sequence3.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
 			void main()
 			{
-			int r;
-			float pi=3.14,area,ci;
+			int i,j,k;
 			clrscr();
-			printf("enter radius of circle: ");
-			scanf("%d",&r);
-			area=pi*r*r;
-			printf("area of circle=%f ",area);
-			ci=2*pi*r;
-			printf("circumference=%f ",ci);
+			for(i=1;i<=3;i++)
+			{
+			for(j=3;j>=i;j--)
+			printf(" ");
+			{
+			for(k=1;k<=i*2-1;k++)
+			printf("*");
+			}
+			printf("\n");
+			}
 			getch();
 			}</pre>
 		<h5>Output:</h5>
-		<code>
-			enter radius of a circle: 5
-			<br>area of circle=78.000
-			<br>circumference=31.4
-		</code>
+		<pre><strong>
+	   *
+	  ***
+	 *****</strong>
+		</pre>
 	</div>
 </body>
 </html>

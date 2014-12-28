@@ -29,14 +29,26 @@
 		</ul>
 	</div>
 	<div>
-		<h4></h4>
+		<h4>Program to find that entered year is leap year or not.</h4>
 		<pre class="brush: cpp">
 			#include&ltstdio.h&gt
 			#include&ltconio.h&gt
-			</pre>
+			void main()
+			{
+			int n;
+			clrscr();
+			printf("enter any year:");
+			scanf("%d",&n);
+			if(n%4==0)
+			printf("year is a leap year");
+			else
+			printf("year is not a leap year");
+			getch();
+			}</pre>
 		<h5>Output:</h5>
 		<code>
-			
+			enter any year: 1947
+			<br>year is not a leap year
 		</code>
 	</div>
 </body>

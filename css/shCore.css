@@ -128,7 +128,7 @@
   padding: 0 !important;
   display: none !important;
 }
-.syntaxhighlighter.collapsed .toolbar span a.expandSource {
+/*.syntaxhighlighter.collapsed .toolbar span a.expandSource {*/
   display: inline !important;
 }
 .syntaxhighlighter .toolbar {
@@ -140,7 +140,7 @@
   font-size: 10px !important;
   z-index: 10 !important;
 }
-.syntaxhighlighter .toolbar span.title {
+/*.syntaxhighlighter .toolbar span.title {*/
   display: inline !important;
 }
 .syntaxhighlighter .toolbar a {
