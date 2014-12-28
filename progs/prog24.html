@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programs</title>
+	<link rel="stylesheet" type="text/css" href="../css/new.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
+	<script type="text/javascript" src="../Js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="../Js/main.js"></script>
+	<script type="text/javascript" src="../Js/shCore.js"></script>
+	<script type="text/javascript" src="../Js/shBrushCpp.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
+			<div><li><h3>Advance Programs</h3></li></div>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<a href="../index.html"><li>Home</li></a>
+			<a href="../programs.html"><li>Programs</li></a>
+			<a href="../Aboutapp.html"><li>About app</li></a>
+			<a href="../contact.html"><li>About Us</li></a>
+		</ul>
+	</div>
+	<div>
+		<h4>Program to find sum of two matrices.</h4>
+		<pre class="brush: cpp">
+			#include&ltstdio.h&gt
+			#include&ltconio.h&gt
+			void main()
+			{
+			int a[3][2],b[3][2],c[3][2],i,j;
+			clrscr();
+			printf("Enter value for 1 matrix: ");
+			for(i=0;i&lt 3;i++)
+			{
+			for(j=0;j&lt 2;j++)
+			scanf("%d",&a[i][j]);
+			}
+			printf("Enter value for 2 matrix: ");
+			for(i=0;i&lt 3;i++)
+			{
+			for(j=0;j&lt 2;j++)
+			scanf("%d",&b[i][j]);
+			}
+			for(i=0;i&lt 3;i++)
+			{
+			for(j=0;j&lt 2;j++)
+			c[i][j]=a[i][j]+b[i][j];
+			}
+			printf("Sum of matrix is\n");
+			for(i=0;i&lt 3;i++)
+			{
+			for(j=0;j&lt 2;j++)
+			{
+			printf("%d\t",c[i][j]);
+			}
+			printf("\n");
+			}
+			getch();
+			}</pre>
+			<h5>Output:</h5>
+		<code>
+		<br>Enter value for 1 matrix: 1
+		<br>2
+		<br>3
+		<br>4
+		<br>5
+		<br>6
+		<br>Enter value for 2 matrix: 4
+		<br>5
+		<br>6
+		<br>1
+		<br>3
+		<br>2
+		<br>Sum of matrix is
+		<br>5 7
+		<br>9 5
+		<br>8 8
+		</code>
+	</div>
+</body>
+</html>
