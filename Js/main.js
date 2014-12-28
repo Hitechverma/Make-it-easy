@@ -21,12 +21,12 @@ $(document).ready(function(){
 	// Fadeing animation
 	$("body").css("display", "none");
  
-    $("body").fadeIn(1000);
+    $("body").fadeIn(1500);
  
     $("a.transition").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-        $("body").fadeOut(2000, redirectPage);     
+        $("body").fadeOut(1000, redirectPage);     
     });
          
     function redirectPage() {

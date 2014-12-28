@@ -10,6 +10,7 @@ a:link {
 
 a:visited {
     text-decoration: none;
+    color: rgb(0,188,212);
 }
 
 a:hover {
@@ -28,7 +29,13 @@ a:hover {
 .nav h1{
 	color: white;
 }
-
+.tact .body{
+	margin-top: 20px;
+}
+.tact .body table td,tr{
+	padding: 10px;
+	border:none;
+}
 .nav{
 	margin-left: -15px;
 	padding: 0;
