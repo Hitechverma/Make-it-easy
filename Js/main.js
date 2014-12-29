@@ -16,12 +16,13 @@ $(document).ready(function(){
 	})
 	$("#btn").click(function(){
 		$("#sidebar").toggle("slow");
+		// $("#my_image").css("-ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);transform: rotate(90deg);");
 	})
 
 	// Fadeing animation
 	$("body").css("display", "none");
  
-    $("body").fadeIn(1500);
+    $("body").fadeIn(1000);
  
     $("a.transition").click(function(event){
         event.preventDefault();
