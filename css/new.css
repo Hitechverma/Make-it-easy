@@ -3,6 +3,7 @@ p{
 }
 body{
 	background-color: rgb(238,239,243);
+	margin-top:-1px;
 }
 a:link {
     text-decoration: none;
@@ -53,14 +54,22 @@ a:hover {
   padding: 0;
   margin: 0;
 }
-
+.page2 h2{
+	color: #003380;
+}
+.page2 li{
+  	font-family:sans-serif;
+  	font-size: 1.1em;
+  	height: 30px;
+  	list-style: none;
+}
 .nav li {
 	/*display: inline;*/
 	padding-left: 20px;
-   font-family:sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
+    font-family:sans-serif;
+  	font-size: 1.2em;
+  	line-height: 40px;
+  	height: 40px;
   /*border-bottom: 1px solid #888;*/
 }
 .nav div{
@@ -68,8 +77,6 @@ a:hover {
 }
 #sidebar { 
 	position:fixed;
-    /*top:0; */
-    /*bottom:0; */
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
     left:0;
     width:40%;
@@ -78,6 +85,7 @@ a:hover {
     z-index: 1;
     float: left;
     color: white;
+    text-align: center;
 	 }
 #sidebar ul {
 	display: inline-block;
@@ -85,16 +93,17 @@ a:hover {
   /*background-color: #444;*/
   padding: 0;
   margin: 0;
+  padding-top: 10px;
 }
 
 #sidebar li {
 	/*display: inline-block;*/
 	padding-left: 20px;
-   font-family:sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
+	font-family:sans-serif;
+	font-size: 1.2em;
+	line-height: 50px;
+ 	height: 50px;
+  /*border-bottom: 1px solid #888;*/
 }
 .pros ul{
 	list-style: none;
@@ -153,7 +162,6 @@ table{
 }
 
 
-
 /*Responsive CSS*/
 
 @media all and (max-width:400px){
@@ -174,6 +182,7 @@ table{
 	border-color: rgb(255,131,167);
 }
 #new{
+	margin-top: 10%;
 	margin-left:2%;
 }
 }
