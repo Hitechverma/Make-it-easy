@@ -20,7 +20,7 @@ a:hover {
 #mpage{
 	background-color: rgb(34,34,34);
 }
-#mpage .nav {
+#mpage .nav {	
 	background-color: rgb(107,212,208);
 	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
 	text-align: center;
@@ -111,7 +111,7 @@ a:hover {
 	border width: 10px;
 	border-style: double;
 	/*width: 40%;*/
-	border-radius: 50%;
+	border-radius: 100%;
 	display:inline-block;
 	float: left;
 	padding:5px;
@@ -125,11 +125,11 @@ a:hover {
 
 }
 .quad li{
-	padding-top: 20%;
+	padding-top: 20px;
 }
 #contact{
 	clear: both;
-	margin-left: 25%;
+	/*margin-left: 25%;*/
 	border-color: rgb(255,131,167);
 }
 #tut{
@@ -152,24 +152,31 @@ table{
 	background-color: #eee;
 }
 
-@media all and (min-width:400px){
+
+
+/*Responsive CSS*/
+
+@media all and (max-width:400px){
+#contact{
+	margin-left: 25%;
+}
+}
+
+@media all and (min-width:401px){
 	.quad{
-	padding:30px;
-	margin: 10%;
+	padding:20px;
+	margin-left:10%;
+	float: none;
 }
 #contact{
 	clear: both;
-	margin-left: 25%;
+	/*margin-left: 25%;*/
 	border-color: rgb(255,131,167);
 }
 #new{
-	margin-left: 20%;
+	margin-left:2%;
 }
-
 }
-
-
-
 
 
 
