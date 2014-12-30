@@ -55,6 +55,7 @@ a:hover {
   margin: 0;
 }
 .page2 h2{
+	padding-top: 20px;
 	color: #003380;
 }
 .page2 li{
@@ -136,6 +137,14 @@ a:hover {
 .quad li{
 	padding-top: 20px;
 }
+.quad:hover{
+	background-color: rgb(107,212,208);
+	border-width: 2px;
+	color: white;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
 #contact{
 	clear: both;
 	/*margin-left: 25%;*/
@@ -186,7 +195,6 @@ table{
 	margin-left:2%;
 }
 }
-
 
 
 
