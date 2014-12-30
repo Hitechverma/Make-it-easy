@@ -1,3 +1,10 @@
+*{
+	-webkit-user-select :none;
+	-moz-user-select :none;
+	-ms-user-select :none;
+	-o-user-select :none;
+	user-select :none;
+}
 p{
 	font-size: 15px;
 }
@@ -55,9 +62,25 @@ a:hover {
   margin: 0;
 }
 .page2 h2{
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 	color: #003380;
 }
+.box h2{
+	text-align:center;
+	position:relative;
+}
+.box {
+	margin:40px auto;
+}
+.effect
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
 .page2 li{
   	font-family:sans-serif;
   	font-size: 1.1em;
@@ -137,14 +160,7 @@ a:hover {
 .quad li{
 	padding-top: 20px;
 }
-.quad:hover{
-	background-color: rgb(107,212,208);
-	border-width: 2px;
-	color: white;
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	transition: all 0.3s linear;
-}
+
 #contact{
 	clear: both;
 	/*margin-left: 25%;*/

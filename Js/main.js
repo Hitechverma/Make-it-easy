@@ -15,19 +15,19 @@ $(document).ready(function(){
 		$("#base").hide("slow");
 	})
 	$("#btn").click(function(){
-		$("#sidebar").toggle("slow");
+		$("#sidebar").toggle("fast");
 		// $("#my_image").css("-ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);transform: rotate(90deg);");
 	})
 
 	// Fadeing animation
 	$("body").css("display", "none");
  
-    $("body").fadeIn(1000);
+    $("body").fadeIn(200);
  
     $("a.transition").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-        $("body").fadeOut(1000, redirectPage);     
+        $("body").fadeOut(200, redirectPage);     
     });
          
     function redirectPage() {
