@@ -16,7 +16,6 @@ $(document).ready(function(){
 	})
 	$("#btn").click(function(){
 		$("#sidebar").slideToggle("fast");
-		// $("#my_image").css("-ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);transform: rotate(90deg);");
 	})
 
 	// Fadeing animation
