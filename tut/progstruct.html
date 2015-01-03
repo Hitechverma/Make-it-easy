@@ -16,8 +16,9 @@
 <body>
 	<div class="nav">
 		<ul>
-			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
-			<div><li><h2>Structure</h2></li></div>
+			<div id="bbtn"><li><a href="#"><img onclick="history.go(-1);" src="../imgs/back.png"></a></li></div>
+			<div ><li id="txt"><h2>Structure</h2></li></div>
+			<div id="btn"><li><a href="#"><img id="my_image" src="../imgs/menu.png"></a></li></div>
 		</ul>
 	</div>
 	<div id="sidebar">
@@ -28,7 +29,7 @@
 			<a href="../contact.html"><li>About Us</li></a>
 		</ul>
 	</div>
-	<div>
+		<div id="main">
 		<p>
 			Before we study basic building blocks of the C programming language, let us look a bare minimum C program structure so that we can take it as a reference in upcoming chapters
 		</p>

@@ -9,8 +9,9 @@
 <body>
 	<div class="nav">
 		<ul>
-			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
-			<div><li><h2>C language</h2></li></div>
+			<div id="bbtn"><li><a href="#"><img onclick="history.go(-1);" src="../imgs/back.png"></a></li></div>
+			<div ><li id="txt"><h2>Overview</h2></li></div>
+			<div id="btn"><li><a href="#"><img id="my_image" src="../imgs/menu.png"></a></li></div>
 		</ul>
 	</div>
 	<div id="sidebar">
@@ -21,7 +22,7 @@
 			<a href="../contact.html"><li>About Us</li></a>
 		</ul>
 	</div>
-	<div>
+		<div id="main">
 		<p>The C programming language is a general-purpose, high-level language that was
 			originally developed by Dennis M. Ritchie to develop the UNIX operating system at Bell
 			Labs. C was originally first implemented on the DEC PDP-11 computer in 1972.

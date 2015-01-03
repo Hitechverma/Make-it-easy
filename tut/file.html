@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>File</title>
 	<link rel="stylesheet" type="text/css" href="../css/new.css">
 	<link rel="stylesheet" type="text/css" href="../css/shCore.css">
 	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css">
@@ -15,8 +16,9 @@
 <body>
 	<div class="nav">
 		<ul>
-			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
-			<div><li><h2>Arrays</h2></li></div>
+			<div id="bbtn"><li><a href="#"><img onclick="history.go(-1);" src="../imgs/back.png"></a></li></div>
+			<div ><li id="txt"><h2>&nbsp&nbsp File</h2></li></div>
+			<div id="btn"><li><a href="#"><img id="my_image" src="../imgs/menu.png"></a></li></div>
 		</ul>
 	</div>
 	<div id="sidebar">
@@ -27,7 +29,7 @@
 			<a href="../contact.html"><li>About Us</li></a>
 		</ul>
 	</div>
-	<div>
+		<div id="main">
 		<section>
 			<p>C programmers can create, open, close text or binary files for their data storage.</p>
 			<p>&nbsp&nbsp&nbspA file represents a sequence of bytes, does not matter if it is a text file or binary file. C programming language provides access on high level functions as well as low level (OS level) calls to handle file on your storage devices. This chapter will take you through important calls for the file management.</p>

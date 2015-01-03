@@ -16,8 +16,9 @@
 <body>
 	<div class="nav">
 		<ul>
-			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
-			<div><li><h2>Pointers</h2></li></div>
+			<div id="bbtn"><li><a href="#"><img onclick="history.go(-1);" src="../imgs/back.png"></a></li></div>
+			<div ><li id="txt"><h2>&nbsp Pointers</h2></li></div>
+			<div id="btn"><li><a href="#"><img id="my_image" src="../imgs/menu.png"></a></li></div>
 		</ul>
 	</div>
 	<div id="sidebar">
@@ -28,7 +29,7 @@
 			<a href="../contact.html"><li>About Us</li></a>
 		</ul>
 	</div>
-		<div>
+		<div id="main">
 			<section>
 				<h4>What Are Pointers?</h4>
 				<p>A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before you can use it to store any variable address. The general form of a pointer variable declaration is:</p>

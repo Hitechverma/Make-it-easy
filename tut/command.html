@@ -15,8 +15,9 @@
 <body>
 	<div class="nav">
 		<ul>
-			<div id="btn"><li><a href="#"><img src="../imgs/menu.png"></a></li></div>
-			<div><li><h2>Command Line Arguments</h2></li></div>
+			<div id="bbtn"><li><a href="#"><img onclick="history.go(-1);" src="../imgs/back.png"></a></li></div>
+			<div ><li id="txt"><h4><strong> Command Line </strong></h4></li></div>
+			<div id="btn"><li><a href="#"><img id="my_image" src="../imgs/menu.png"></a></li></div>
 		</ul>
 	</div>
 	<div id="sidebar">
@@ -27,7 +28,7 @@
 			<a href="../contact.html"><li>About Us</li></a>
 		</ul>
 	</div>
-	<div>
+		<div id="main">
 		<section>
 			<p>It is possible to pass some values from the command line to your C programs when they are executed. These values are called command line arguments and many times they are important for your program specially when you want to control your program from outside instead of hard coding those values inside the code.</p>
 			<p>&nbsp&nbsp&nbsp&nbspThe command line arguments are handled using main() function arguments where argc refers to the number of arguments passed, and argv[] is a pointer array which points to each argument passed to the program. Following is a simple example which checks if there is any argument supplied from the command line and take action accordingly:</p>
