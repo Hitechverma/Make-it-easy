@@ -211,7 +211,7 @@ table{
 
 /*Responsive CSS*/
 
-@media all and (max-width:400px){
+@media all and (max-device-width:400px){
 #contact{
 	margin-left: 25%;
 	height: 110px;
@@ -237,8 +237,7 @@ table{
 #contact{
 	clear: both;
 	border-color: rgb(255,131,167);
-	height: 110px;
-}
+	}
 #new{
 	margin-top: 10%;
 	margin-left:2%;
@@ -262,7 +261,7 @@ table{
 #contact{
 	clear: both;
 	border-color: rgb(255,131,167);
-	height: 110px;
+	
 }
 #new{
 	margin-top: 10%;
