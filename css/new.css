@@ -34,7 +34,9 @@ a:hover {
 	background-color: rgb(107,212,208);
 	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
 	text-align: center;
-	padding-bottom: 5px;
+}
+#mpage .nav h1{
+	font-size: 2.5em;
 }
 .nav h1{
 	color: white;
@@ -213,9 +215,6 @@ table{
 #contact{
 	margin-left: 25%;
 	height: 110px;
-}
-#mpage .nav li{
-	padding-left: 0;
 }
 }
 
