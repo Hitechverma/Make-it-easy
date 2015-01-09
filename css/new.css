@@ -109,6 +109,7 @@ a:hover {
 #btn{
 	padding-top: 20px;
 	height: 40px;
+	margin-right: 2%;
 	float: right;
 }
 #sidebar { 
@@ -215,6 +216,11 @@ table{
 #contact{
 	margin-left: 25%;
 	height: 110px;
+}
+#txt{
+	position: relative;
+	display: inline-block;
+	margin-left: -5%;
 }
 }
 
