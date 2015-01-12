@@ -1,6 +1,6 @@
 {
   "name": "Make it easy",
-  "description": "This is a C language tutorial handbook app.",
+  "description": "C Made Easy!, An application that answers your call of having a straight and simple guidance through the C language. The app contains well explained examples which will make your learning graph smooth and easy. It was designed keeping in mind the straightforward questions that arises while learning a new language. You will find detailed definations and examples of each basic topics present in the language. 'So be curious and keep thriving, happy learning!' ",
   "launch_path": "/index.html",
   "icons": {
     "128": "/icon.png"

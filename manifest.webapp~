@@ -1,0 +1,19 @@
+{
+  "name": "Make it easy",
+  "description": "C Made Easy!, An application that answers your call of having a straight and simple guidance through the C language. The app contains well explained examples which will make your learning graph smooth and easy. It was designed keeping in mind the straightforward questions that arises while learning a new language. You will find detailed definations and examples of each basic topics present in the language.o be curious and keep thriving, happy learning! ",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icon.png"
+  },
+  "developer": {
+    "name": "Hitech",
+    "url": "http://www.facebook.com/hitechverma"
+  },
+  "default_locale": "en",
+  "permissions": {
+    "geolocation": {
+      "description": "It is a simple app."
+    }
+  }
+}
+
